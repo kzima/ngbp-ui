@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+  <html
+    class="no-js ie6 oldie"
+    lang="en"
+    xmlns:ng="http://angularjs.org/"
+    ng-app="myApp"
+    ng-controller="AppCtrl">
+<![endif]-->
+<!--[if IE 7]>
+  <html
+    class="no-js ie7 oldie"
+    lang="en"
+    xmlns:ng="http://angularjs.org/"
+    ng-app="myApp"
+    ng-controller="AppCtrl">
+<![endif]-->
+<!--[if IE 8]>
+  <html
+    class="no-js ie8 oldie"
+    lang="en"
+    xmlns:ng="http://angularjs.org/"
+    ng-app="myApp"
+    ng-controller="AppCtrl">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html
+  class="no-js"
+  lang="en"
+  xmlns:ng="http://angularjs.org/"
+  ng-app="myApp"
+  ng-controller="AppCtrl">
+<!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="pageTitle">Angular Seed</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="lib/modernizr/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <title ng-bind="page-title">Project Title</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ng-class="{active: $state.includes('home')}"><a ui-sref="home">Home</a></li>
+              <li ng-class="{active: $state.includes('samplePage')}"><a ui-sref="samplePage">Sample Page</a></li>
+            </ul>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </div>
+
+      <!-- main content -->
+      <section ui-view></section>
+    
+    </div><!-- /#wrap -->
+
+    <footer class="well well-sm no-margin">
+      <div class="container">
+        2013
+      </div> <!-- /container -->
+    </footer>
+
+    <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="lib/angular-mocks/angular-mocks.js"></script>
+    <script type="text/javascript" src="lib/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+    <script type="text/javascript" src="src/home/Home.js"></script>
+    <script type="text/javascript" src="src/samplePage/SamplePage.js"></script>
+    
+   
+  </body>
+</html>

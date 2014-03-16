@@ -1,0 +1,35 @@
+{
+    "author": "Kris Zima",
+    "name": "appName",
+    "version": "0.0.1",
+    "description": "",
+    "homepage": "https://github.com/kzima",
+    "licenses": {
+      "type": "MIT",
+      "url": "https://raw.github.com/kzima/ngbp-ui/master/LICENSE"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:kzima/ngbp-ui.git"
+    },
+    "devDependencies": {
+    	"grunt": "*",
+    	"grunt-contrib-clean": "*",
+      "grunt-contrib-concat": "*",
+      "grunt-contrib-uglify": "*",
+      "grunt-contrib-jshint": "*",
+    	"grunt-contrib-less" : "*",
+      "grunt-contrib-watch" : "*",
+      "grunt-ngmin" : "*",
+      "grunt-karma" : "*",
+      "karma" : "*",
+      "karma-junit-reporter" : "*",    
+      "karma-jasmine" : "*",
+      "karma-ng-scenario" : "*",
+      "karma-requirejs": "*",
+      "karma-chrome-launcher": "*",
+      "karma-firefox-launcher": "*",
+      "karma-phantomjs-launcher": "*",
+      "karma-script-launcher": "*"
+    }
+}

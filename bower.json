@@ -1,0 +1,16 @@
+{
+  "name": "angular-seed",
+  "version": "0.0.1",
+  "devDependencies": {
+    "angular": "*",
+    "angular-animate": "*",
+    "angular-mocks": "*",
+    "bootstrap": "*",
+    "angular-bootstrap": "*",
+    "angular-ui-router": "*",
+    "angular-ui-utils": "*", 
+    "angular-placeholders": "https://github.com/joshdmiller/angular-placeholders.git", 
+    "modernizr": "*"
+  },
+  "dependencies": {}
+}
