@@ -8,33 +8,9 @@
 * grunt for development/production work-flow
 * less with source maps support
 * karma testing
-* live reload [Live Reload](http://livereload.com/) so you don't have to refresh browser each time you change html, js or less
-
-You need a Live Reload browser plugin for this to work:
-
-- Chrome - [Chrome Webstore](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
-- Firefox - [Download from Live Reload](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
-- Safari - [Download from Live Reload](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)
-
+* live reload so you don't have to refresh browser each time you change html, js or less
 * angular placeholders directive to mock-up images and lorem ipsum paragraphs
-
-sample img placeholder:
-<img ph-img="160x83" />
-
-sample two paragraphs (2p) and three sentences in each (3s)
-<p ph-txt="2p3s"></p>
-
-more info here:
-http://joshdmiller.github.io/angular-placeholders/
-
 * ng-min for handling Angulr JS's dependency injection annotation
-
-so instead of doing this:
-.directive("$scope", function($scope) {...})
-
-you can save time by just doing this instead:
-.directive(function($scope) {...})
-
 
 ## How to use?
 ### Installation
@@ -48,22 +24,42 @@ you can save time by just doing this instead:
 3. add new module less file to main.less import
 4. run grunt 
 
+### Live reload usage
+You need a Live Reload browser plugin for this to work:
+Chrome - [Chrome Webstore](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+Firefox - [Download from Live Reload](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
+Safari - [Download from Live Reload](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)
+You can find more info [here](http://livereload.com/)
+
+### Angular Placeholder usage
+
+sample img placeholder:
+<img ph-img="160x83" />
+
+sample two paragraphs (2p) and three sentences in each (3s)
+<p ph-txt="2p3s"></p>
+
+more info at [joshdmiller's github page](http://joshdmiller.github.io/angular-placeholders/):
+
+### Ng-min grunt usage
+This is run as part of the grunt and you really need to follow [ng-min guidelines](https://github.com/btford/ngmin) so to make sure its pre-minified correctly:
+
 ### Development
 run 
 grunt (defaults to grunt watch)
 
-![grunt watch](https://github.com/kzima/img/grunt_watch.png "Grunt watch cmd")
-![grunt watch](https://github.com/kzima/img/grunt_watch.png "Grunt watch source")
-
-run 
-"grunt test" (testing + watch)
-
-![grunt test](https://github.com/kzima/img/grunt_test.png "Grunt test cmd")
-![grunt test](https://github.com/kzima/img/grunt_test.png "Grunt test source")
+![grunt watch](https://github.com/kzima/img/grunt_watch_cmd.png "Grunt watch cmd")
+![grunt watch](https://github.com/kzima/img/grunt_watch_src.png "Grunt watch source")
 
 ### Production
 run 
-"grunt dist" (one off minification and code compression)
+"grunt dist" (one off minification and code compression, it also ads version number to min.js and min.css file based on package.json version)
 
-![grunt production](https://github.com/kzima/img/grunt_production.png "Grunt production cmd")
-![grunt production](https://github.com/kzima/img/grunt_production.png "Grunt production source")
+![grunt production](https://github.com/kzima/img/grunt_production_cmd.png "Grunt production cmd")
+![grunt production](https://github.com/kzima/img/grunt_production_src.png "Grunt production source")
+
+### Testing
+run 
+"grunt test" (testing + watch)
+
+![grunt test](https://github.com/kzima/img/grunt_test_cmd.png "Grunt test cmd")

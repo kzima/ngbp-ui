@@ -73,7 +73,7 @@ module.exports = function(grunt) {
       compile: {
         files: [{
           cwd: 'src',
-          src: ['**/*.js'],
+          src: ['**/*.js', '!_template/*.js'],
           dest: 'build',
           expand: true
         }]
