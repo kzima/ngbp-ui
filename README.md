@@ -49,7 +49,7 @@ run
 grunt (defaults to grunt watch)
 
 ![grunt watch](https://raw.github.com/kzima/ngbp-ui/master/img/grunt_watch_cmd.jpg "Grunt watch cmd")
-![grunt watch](https://raw.github.com/kzima/ngbp-ui/master/img/grunt_watch_src.png "Grunt watch source")
+![grunt watch](https://raw.github.com/kzima/ngbp-ui/master/img/grunt_watch_src.jpg "Grunt watch source")
 
 ### Production
 run 
