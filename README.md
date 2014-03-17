@@ -1,4 +1,4 @@
-# ngbp-ui - is an angular-seed for AngularJS apps. Inspired by [angular seed](https://github.com/angular/angular-seed) and [ngbp](https://github.com/ngbp/ngbp)
+# Ngbp-ui is an angular-seed for AngularJS apps. Inspired by [angular seed](https://github.com/angular/angular-seed) and [ngbp](https://github.com/ngbp/ngbp)
 
 ##Features:
 * best-practice directory structure
