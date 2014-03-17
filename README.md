@@ -1,4 +1,4 @@
-# ngbp-ui - is an angular-seed for AngularJS apps. Inspired by [angular seed](https://github.com/angular/angular-seed) and [ngbp](https://github.com/ngbp/ngbp).
+# ngbp-ui - is an angular-seed for AngularJS apps. Inspired by [angular seed](https://github.com/angular/angular-seed) and [ngbp](https://github.com/ngbp/ngbp)
 
 ##Features:
 * best-practice directory structure
@@ -34,10 +34,10 @@ You can find more info [here](http://livereload.com/)
 ### Angular Placeholder usage
 
 sample img placeholder:
-<img ph-img="160x83" />
+`<img ph-img="160x83" />`
 
 sample two paragraphs (2p) and three sentences in each (3s)
-<p ph-txt="2p3s"></p>
+`<p ph-txt="2p3s"></p>`
 
 more info at [joshdmiller's github page](http://joshdmiller.github.io/angular-placeholders/):
 
@@ -46,7 +46,7 @@ This is run as part of the grunt and you really need to follow [ng-min guideline
 
 ### Development
 run 
-grunt (defaults to grunt watch)
+"grunt" (defaults to grunt watch)
 
 ![grunt watch](https://raw.github.com/kzima/ngbp-ui/master/img/grunt_watch_cmd.jpg "Grunt watch cmd")
 ![grunt watch](https://raw.github.com/kzima/ngbp-ui/master/img/grunt_watch_src.jpg "Grunt watch source")
