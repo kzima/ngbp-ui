@@ -48,18 +48,18 @@ This is run as part of the grunt and you really need to follow [ng-min guideline
 run 
 grunt (defaults to grunt watch)
 
-![grunt watch](https://github.com/kzima/img/grunt_watch_cmd.png "Grunt watch cmd")
-![grunt watch](https://github.com/kzima/img/grunt_watch_src.png "Grunt watch source")
+![grunt watch](https://github.com/kzima/ngbp-ui/tree/master/img/grunt_watch_cmd.png "Grunt watch cmd")
+![grunt watch](https://github.com/kzima/ngbp-ui/tree/master/img/grunt_watch_src.png "Grunt watch source")
 
 ### Production
 run 
 "grunt dist" (one off minification and code compression, it also ads version number to min.js and min.css file based on package.json version)
 
-![grunt production](https://github.com/kzima/img/grunt_production_cmd.png "Grunt production cmd")
-![grunt production](https://github.com/kzima/img/grunt_production_src.png "Grunt production source")
+![grunt production](https://github.com/kzima/ngbp-ui/tree/master/img/grunt_production_cmd.png "Grunt production cmd")
+![grunt production](https://github.com/kzima/ngbp-ui/tree/master/img/grunt_production_src.png "Grunt production source")
 
 ### Testing
 run 
 "grunt test" (testing + watch)
 
-![grunt test](https://github.com/kzima/img/grunt_test_cmd.png "Grunt test cmd")
+![grunt test](https://github.com/kzima/ngbp-ui/tree/master/img/grunt_test_cmd.png "Grunt test cmd")
