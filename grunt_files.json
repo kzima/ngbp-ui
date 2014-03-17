@@ -5,10 +5,11 @@
       "src/samplePage/SamplePage.js"
     ],
     "lib_files" : [
-      "lib/jquery/jquery.js",
+      "lib/jquery/dist/jquery.js",
       "lib/angular/angular.js",
       "lib/angular-ui-router/release/angular-ui-router.min.js",
       "lib/angular-mocks/angular-mocks.js",
-      "lib/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"
+      "lib/angular-placeholders/src/img/img.js",
+      "lib/angular-placeholders/src/txt/txt.js"
     ]
 }

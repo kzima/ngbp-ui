@@ -1,6 +1,6 @@
 angular.module( 'myApp.home', [
   'ui.router', 
-  'placeholders'
+  'placeholders.txt'
 ])
 
 /**

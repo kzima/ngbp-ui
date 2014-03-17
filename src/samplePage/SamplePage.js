@@ -1,6 +1,6 @@
 angular.module( 'myApp.samplePage', [
   'ui.router', 
-  'placeholders'
+  'placeholders.img'
 ])
 
 .config([
