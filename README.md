@@ -39,10 +39,10 @@ sample img placeholder:
 sample two paragraphs (2p) and three sentences in each (3s)
 `<p ph-txt="2p3s"></p>`
 
-more info at [joshdmiller's github page](http://joshdmiller.github.io/angular-placeholders/)
+more info at [joshdmiller's github page](http://joshdmiller.github.io/angular-placeholders/).
 
 ### Ng-min grunt usage
-This is run as part of the grunt and you really need to follow [ng-min guidelines](https://github.com/btford/ngmin) so to make sure its pre-minified correctly:
+This is run as part of the grunt and you really need to follow [ng-min guidelines](https://github.com/btford/ngmin) so to make sure its pre-minified correctly.
 
 ### Development
 run 
