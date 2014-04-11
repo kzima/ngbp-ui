@@ -8,20 +8,18 @@ angular.module( 'myApp.home', [
  * will handle ensuring they are all available at run-time, but splitting it
  * this way makes each module more "self-contained".
  */
-.config([
-	'$stateProvider', 
-	function config( $stateProvider ) {
+.config( function config( $stateProvider ) {
 	$stateProvider.state( 'home', {
 		url: '/home',
 		controller: 'HomeCtrl',
 		templateUrl: 'src/home/home.html',
 		data:{ pageTitle: 'Home' }
 	});
-}])
+})
 
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', function HomeController( $scope ) {
+.controller( 'HomeCtrl', function ( $scope ) {
 
 });

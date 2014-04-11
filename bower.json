@@ -2,15 +2,20 @@
   "name": "angular-seed",
   "version": "0.0.1",
   "devDependencies": {
-    "angular": "*",
-    "angular-animate": "*",
-    "angular-mocks": "*",
-    "bootstrap": "*",
-    "angular-bootstrap": "*",
-    "angular-ui-router": "*",
-    "angular-ui-utils": "*", 
-    "angular-placeholders": "https://github.com/joshdmiller/angular-placeholders.git", 
-    "modernizr": "*"
+    "jquery": "1.11.0",
+    "angular": "1.2.16",
+    "angular-animate": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-mocks": "1.2.16",
+    "bootstrap": "3.1.1",
+    "angular-bootstrap": "0.10.0",
+    "angular-ui-router": "1.2.16",
+    "angular-ui-utils": "0.1.1", 
+    "angular-placeholders": "*",
+    "ngDialog": "0.1.6",
+    "angular-spinner": "0.4.0",
+    "modernizr": "2.7.1", 
+    "momentjs": "2.5.1"
   },
   "dependencies": {}
 }

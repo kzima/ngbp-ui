@@ -1,15 +1,14 @@
 {
     "app_files" : [
-      "src/app.js",
-      "src/home/Home.js",
-      "src/samplePage/SamplePage.js"
+      "app.js",
+      "home/Home.js",
+      "samplePage/SamplePage.js"
     ],
     "lib_files" : [
-      "lib/jquery/dist/jquery.js",
-      "lib/angular/angular.js",
-      "lib/angular-ui-router/release/angular-ui-router.min.js",
-      "lib/angular-mocks/angular-mocks.js",
-      "lib/angular-placeholders/src/img/img.js",
-      "lib/angular-placeholders/src/txt/txt.js"
+      "jquery/dist/jquery.js",
+      "angular/angular.js",
+      "angular-ui-router/release/angular-ui-router.min.js",
+      "angular-placeholders/src/img/img.js",
+      "angular-placeholders/src/txt/txt.js"
     ]
 }

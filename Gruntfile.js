@@ -1,8 +1,25 @@
 module.exports = function(grunt) {
+  
+  // source files reference
+  var grunt_files = grunt.file.readJSON("grunt_files.json");
+  var app_files = [];
+  var lib_files = [];
+  var build_files = [];
+  for (var i = 0; i < grunt_files.app_files.length; i++) {
+    app_files.push('src/'+grunt_files.app_files[i]);
+    build_files.push('build/'+grunt_files.app_files[i]);
+  }
+  for (var j = 0; j < grunt_files.lib_files.length; j++) {
+    lib_files.push('lib/'+grunt_files.lib_files[j]);
+  }
+
+  // grunt config
   grunt.initConfig({
 
     // global congiguration
-    grunt_files: grunt.file.readJSON("grunt_files.json"),
+    app_files: app_files,
+    lib_files: lib_files,
+    build_files: build_files,
     pkg: grunt.file.readJSON("package.json"),
     dest_fileName: '<%= pkg.name %>-<%= pkg.version %>.min',
 
@@ -14,7 +31,6 @@ module.exports = function(grunt) {
         ' * <%= pkg.homepage %>\n' +
         ' *\n' +
         ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-        ' * Licensed <%= pkg.licenses.type %> <<%= pkg.licenses.url %>>\n' +
         ' */\n'
     },
 
@@ -84,7 +100,7 @@ module.exports = function(grunt) {
     concat: {
       // js source files
       compile_js: {
-        src: ['<%= grunt_files.lib_files %>','<%= grunt_files.app_files %>'],
+        src: ['<%= lib_files %>','<%= build_files %>'],
         dest: 'build/<%= dest_fileName %>.js'
       }
     },
@@ -92,7 +108,10 @@ module.exports = function(grunt) {
     // Minify the sources!
     uglify: {
       compile: {
+
         options: {
+          //mangle: false,
+          //beautify: true,
           banner: '<%= meta.banner %>'
         },
         files: {
@@ -103,8 +122,8 @@ module.exports = function(grunt) {
 
     index: {
       build: {
-        lib_files: '<%= grunt_files.lib_files %>',
-        app_files: '<%= grunt_files.app_files %>'
+        lib_files: '<%= lib_files %>',
+        app_files: '<%= app_files %>'
       },
       compile: {}
     },
@@ -123,13 +142,58 @@ module.exports = function(grunt) {
       }
     },
 
+    grunticon: {
+      run: {
+        files: [{
+          expand: true,
+          cwd: 'img/svgs',
+          src: ['*.svg', '*.png'],
+          dest: "."
+        }],
+        options: {
+
+          // optional grunticon config properties
+          // SVGO compression, false is the default, true will make it so
+          svgo: true,
+
+          // PNG compression, false is the default, true will make it so
+          pngcrush: false,
+
+          // CSS filenames
+          datasvgcss: "assets/icons.svg.css",
+          datapngcss: "assets/icons.png.css",
+          urlpngcss: "assets/icons.fallback.css",
+
+          // folder name (within dest) for png output
+          pngfolder: "img/icons",
+
+          // prefix for CSS classnames
+          cssprefix: ".icon-",
+
+          defaultWidth: "32px",
+          defaultHeight: "32px",
+
+          // define vars that can be used in filenames if desirable, like foo.colors-primary-secondary.svg
+          /*colors: {
+            primary: "red",
+            secondary: "#666"
+          },*/
+
+          // css file path prefix - this defaults to "/" and will be placed before the "dest" path when stylesheets are loaded.
+          // This allows root-relative referencing of the CSS. If you don't want a prefix path, set to to ""
+          cssbasepath: "../img/icons"
+
+        }
+      }
+    },
+
     // watch for file changes
     watch: {
       less: {
         options: {
           livereload: true
         },
-        files: ["less/main.less", "src/**/*.less"],
+        files: ["less/**/*.less", "src/**/*.less"],
         tasks: ["less:build"]
       },
       index: {
@@ -165,8 +229,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-ngmin');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-grunticon');
+
   // Default task(s).
   grunt.registerTask('default', ['index:build','watch']);
+  grunt.registerTask('icons', ['grunticon:run']);
   grunt.registerTask('test', ['index:build', 'karma:continuous', 'karma:unit', 'watch']);
   grunt.registerTask('dist', ['clean', 'less:compile', 'jshint', 'ngmin', 'concat:compile_js', 'uglify', 'index:compile']);
 

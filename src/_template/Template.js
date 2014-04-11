@@ -1,5 +1,5 @@
-angular.module( 'myApp.template', [
-  'ui.router'
+angular.module( 'virgin._template', [
+
 ])
 
 /**
@@ -7,20 +7,19 @@ angular.module( 'myApp.template', [
  * will handle ensuring they are all available at run-time, but splitting it
  * this way makes each module more "self-contained".
  */
-.config([
-	'$stateProvider', 
-	function config( $stateProvider ) {
-	$stateProvider.state( 'template', {
-		url: '/template',
-		controller: 'TemplateCtrl',
-		templateUrl: 'src/template/template.html',
-		data:{ pageTitle: 'Template' }
+.config( function config( $stateProvider ) {
+	$stateProvider.state( '_template', {
+		url: '/_template',
+		controller: '_TemplateCtrl',
+		templateUrl: settings.assetsUrl + 'src/_template/_template.html',
+		data:{ pageTitle: '_Template' }
 	});
-}])
+})
 
 /**
- * And of course we define a controller for our route.
+ * Binds models with the scope variables
+ * @param  {Object} $scope   
  */
-.controller( 'TemplateCtrl', ['$scope', function TemplateController( $scope ) {
+.controller( '_TemplateCtrl', function ( $scope ) {
 
-}]);
+});

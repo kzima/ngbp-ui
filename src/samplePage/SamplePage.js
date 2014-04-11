@@ -3,17 +3,15 @@ angular.module( 'myApp.samplePage', [
   'placeholders.img'
 ])
 
-.config([
-	'$stateProvider', 
-	function config( $stateProvider ) {
+.config( function config( $stateProvider ) {
   $stateProvider.state( 'samplePage', {
     url: '/samplePage',
     controller: 'SamplePage',
     templateUrl: 'src/samplePage/samplePage.html',
     data:{ pageTitle: 'Sample Page' }
   });
-}])
+})
 
-.controller( 'SamplePage', function SamplePage( $scope ) {
+.controller( 'SamplePage', function ( $scope ) {
 
 });
